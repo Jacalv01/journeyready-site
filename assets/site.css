@@ -1,0 +1,61 @@
+/* journeyready.ca: brand stylesheet (brand/BRAND.md). Self-hosted font only; no external requests. */
+@font-face{font-family:"Inter";src:url("fonts/Inter-Variable-latin.woff2") format("woff2");font-weight:100 900;font-display:swap}
+:root{--navy:#1B365D;--night:#0F1B2B;--ink:#1F4E79;--amber:#F2A33A;--paper:#F6F3EC;--text:#23272F;--slate:#5C6672;--steel:#A9B7C9;--line:#DDD7CA;--card:#FFFFFF}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font:17px/1.6 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--text);background:var(--paper);font-feature-settings:"cv11" 1}
+.wrap{max-width:880px;margin:0 auto;padding:0 24px}
+a{color:var(--ink);text-underline-offset:.15em}
+a:hover{color:var(--navy)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:2px;border-radius:4px}
+/* header */
+.site-header{background:var(--night);color:var(--paper)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px}
+.brand img{display:block;height:40px;width:auto}
+.site-header nav{display:flex;gap:6px 18px;flex-wrap:wrap;font-weight:600;font-size:15px}
+.site-header nav a{color:var(--steel);text-decoration:none;padding:4px 0;border-bottom:2px solid transparent}
+.site-header nav a:hover,.site-header nav a[aria-current=page]{color:var(--paper);border-bottom-color:var(--amber)}
+/* content */
+.content{padding-top:28px;padding-bottom:48px}
+h1,h2,h3,h4{color:var(--navy);line-height:1.2;letter-spacing:-.015em}
+h1{font-weight:800;font-size:clamp(2rem,5vw,3rem);margin:.4em 0 .35em}
+h2{font-weight:700;font-size:1.7rem;margin:1.9em 0 .6em;padding-bottom:.3em;border-bottom:1px solid var(--line)}
+h3{font-weight:700;font-size:1.25rem;margin:1.6em 0 .4em}
+h4{font-weight:700;font-size:1.05rem;margin:1.4em 0 .3em}
+p,li{max-width:72ch}
+main ul,main ol{padding-left:1.5em;margin:.6em 0 1em}
+main li{margin:.35em 0}
+main li>ul,main li>ol{margin:.45em 0 .2em;padding-left:1.4em;list-style:circle}
+main li li{margin:.25em 0}
+code{font-size:.92em;background:#ECE7DC;padding:.05em .35em;border-radius:4px}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:.95rem;background:var(--card)}
+td,th{border:1px solid var(--line);padding:8px 10px;vertical-align:top;text-align:left}
+th{background:#EEF1F5;color:var(--navy)}
+/* landing (home) classes from launch/landing.html */
+.page-home .content>header{background:var(--night);color:var(--paper);margin:0 -24px;padding:28px 24px 30px;border-radius:0 0 20px 20px}
+.page-home .content>header h1{color:var(--paper);margin-top:.2em}
+.page-home .content>header .sub,.page-home .content>header .small{color:var(--steel)}
+.page-home .content{padding-top:0}
+.sub{color:var(--slate);font-size:1.15rem}
+.small{color:var(--slate);font-size:.88rem}
+.cta{display:inline-block;background:var(--amber);color:var(--night);font-weight:700;padding:13px 22px;border-radius:12px;text-decoration:none;margin:12px 0}
+.cta:hover{color:var(--night);filter:brightness(1.05)}
+.cta-pending{cursor:default;background:transparent;color:var(--amber);border:2px solid var(--amber)}
+.cta-pending:hover{color:var(--amber);filter:none}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:0 2px 8px rgba(27,54,93,.06)}
+.card strong{color:var(--navy)}
+.q{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:14px 0}.q ol{list-style:upper-alpha;padding-left:1.4em}
+details{margin-top:8px}summary{cursor:pointer;color:var(--ink);font-weight:600}
+.tag{font-size:.8rem;color:var(--slate)}
+.content>footer{margin-top:3em;color:var(--slate);font-size:.88rem;border-top:1px solid var(--line);padding-top:1em}
+/* site footer */
+.site-footer{background:var(--navy);color:var(--steel);font-size:.88rem;padding:26px 0 34px}
+.site-footer a{color:var(--paper)}
+.site-footer p{margin:.5em 0}
+.site-footer .site-disclaimer{color:var(--paper)}
+.site-footer .credit{font-size:.8rem}
+@media (max-width:520px){body{font-size:16px}.brand img{height:34px}}
+@media print{.site-header,.site-footer{background:none;color:#000}}
+@media (max-width:720px){table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}}
+.content{overflow-wrap:anywhere}
